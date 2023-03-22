@@ -1,0 +1,139 @@
+
+
+/* Browser Reset and General Rules */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    overflow:visible;
+}
+
+body {
+    background-color: #df9284;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+header{
+    background-image: url(/sources/beauty-salon.jpg);
+    height: 400px;
+}
+
+header img {
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: auto;
+}
+
+/* Navigation Bar */
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 15px 5px;
+    margin: 10px;
+    background-color: #b4432f;
+    border-radius: 5px;
+    width: 260px;
+}
+nav li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: large;
+}
+nav li a::after {
+    color: bisque;
+}
+
+/*Main */
+section {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.promotion{
+    display: flex;
+    background-size: cover;
+    background-image: linear-gradient(to  bottom right, blue, white 60%, red 90%);
+    font-size:x-large;
+    font-weight: 600;
+    color: aliceblue;
+    text-shadow: 1px 1px red;
+    height: 300px;
+}
+.promotion-item{
+    flex: 1;
+}
+
+
+article {
+    flex: 1;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color:#2f9fb3;
+    
+}
+
+#time{
+    text-align:center;
+    text-indent: 2em;
+}
+
+
+article button {
+    padding: 15px 5px;
+    margin:5% 25%;
+    background-color: #d0604c;
+    color:white;
+    border-radius: 5px;
+    width: 200px;
+}
+
+
+.sides img{
+    max-width: 100%;
+}
+.sides h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #d0604c;
+    color: white;
+    border-radius:10px;
+}
+.sides p {
+    text-align: justify;
+    text-indent: 1em;
+    padding: 5px;
+}
+
+
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer div {
+    flex:1;
+    width: 50%;
+    text-align: center;
+    color:#2f9fb3;
+}
+
+.small_logo {
+    object-fit:contain;
+    max-width: 50%;
+}
