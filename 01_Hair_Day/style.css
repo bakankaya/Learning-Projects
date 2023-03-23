@@ -43,6 +43,10 @@ nav li {
     border-radius: 5px;
     width: 260px;
 }
+nav li:hover{
+    box-shadow: 5px 5px 2px white;
+
+}
 nav li a{
     color: white;
     text-decoration: none;
@@ -82,7 +86,6 @@ article {
     padding: 10px;
     border-radius: 8px;
     background-color:#2f9fb3;
-    
 }
 
 #time{
@@ -100,10 +103,13 @@ article button {
     width: 200px;
 }
 
+ar
+
 
 .sides img{
     max-width: 100%;
 }
+
 .sides h2 {
     text-align: center;
     text-transform: uppercase;
@@ -112,6 +118,7 @@ article button {
     color: white;
     border-radius:10px;
 }
+
 .sides p {
     text-align: justify;
     text-indent: 1em;
