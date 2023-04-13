@@ -5,12 +5,13 @@ Trying the odin project guide
 // A function that randomly chooses within options
 
 function getComputerChoice(){
-    let choices = ["rock", "paper", "scissors"];
+    let choices = ["ROCK", "PAPER", "SCISSORS"];
     let compchoice = choices[(Math.floor(Math.random() * choices.length))];
     return compchoice;
 }
 
-// Getting Input from user
+// Getting Input from user (Removed from function also!)
+/*
 function getPlayerChoice(){
     let playerchoice = prompt("Rock, Paper or Scissors?" ).toLowerCase();
     if (playerchoice == "rock"||playerchoice == "paper" ||playerchoice == "scissors"){
@@ -19,10 +20,12 @@ function getPlayerChoice(){
     return "I didn't understand that, try again";
     }
 }
+*/
+
 // Comparing computer and user and deciding on winner
 function playRound(){
     let game;
-    var playerchoice = getPlayerChoice();
+//    let playerchoice;
     var compchoice = getComputerChoice();
     if (playerchoice == compchoice){
         return "It's a tie!";
@@ -43,6 +46,7 @@ function playRound(){
     }
 }
 // run it five times
+/*
 function game(){
     let compscore;
     let playerscore;
@@ -60,4 +64,17 @@ function game(){
     return 'you Lost!';
 }
 }
+*/
+let playerchoice;
+// Adding Event Listener
 
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll('#btn');
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    playerchoice = button.innerText;
+    playRound();
+  });
+});
