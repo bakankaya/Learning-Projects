@@ -1,4 +1,4 @@
-/* Rock Paper Scissors Game
+/* ROCK PAPER SCISSORS Game
 Trying the odin project guide
 */
 
@@ -13,8 +13,8 @@ function getComputerChoice(){
 // Getting Input from user (Removed from function also!)
 /*
 function getPlayerChoice(){
-    let playerchoice = prompt("Rock, Paper or Scissors?" ).toLowerCase();
-    if (playerchoice == "rock"||playerchoice == "paper" ||playerchoice == "scissors"){
+    let playerchoice = prompt("ROCK, PAPER or SCISSORS?" ).toLowerCase();
+    if (playerchoice == "ROCK"||playerchoice == "PAPER" ||playerchoice == "SCISSORS"){
         return playerchoice;
     } else {
     return "I didn't understand that, try again";
@@ -22,27 +22,50 @@ function getPlayerChoice(){
 }
 */
 
+
+// Adding Event Listener
+const buttons = document.querySelectorAll('.btn');
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener, choosing from player and calling the game
+  button.addEventListener('click', () => {  //!!!Probably I need another eventlistener to get the timing right!!!
+    playerchoice = button.textContent;
+    document.getElementById('scorepy').textContent = playerscore;
+    document.getElementById('scorepc').textContent = compscore;
+    document.getElementById('prompt').textContent = playRound();
+    counter();
+  });
+});
+
+let compscore = 0;
+let playerscore = 0;
+
 // Comparing computer and user and deciding on winner
 function playRound(){
-    let game;
-//    let playerchoice;
+
     var compchoice = getComputerChoice();
     if (playerchoice == compchoice){
         return "It's a tie!";
-    } else if (playerchoice=="rock" && compchoice=="paper"){
-        return "Paper beats Rock, you lose!";
-    } else if (playerchoice=="rock"& compchoice=="scissors"){
-        return "Rock beats Scissors, you win!";
+    } else if (playerchoice=="ROCK" && compchoice=="PAPER"){
+        compscore++;
+        return "PAPER beats ROCK!";
+    } else if (playerchoice=="ROCK"& compchoice=="SCISSORS"){
+        playerscore++;
+        return "ROCK beats SCISSORS!";
 
-    } else if (playerchoice=="paper"& compchoice=="scissors"){
-        return "Scissors beats Paper, you lose!";
-    } else if (playerchoice=="paper"& compchoice=="rock"){
-        return "Paper beats Rock, you win!";
+    } else if (playerchoice=="PAPER"& compchoice=="SCISSORS"){
+        compscore++;
+        return "SCISSORS beats PAPER!";
+    } else if (playerchoice=="PAPER"& compchoice=="ROCK"){
+        playerscore++;
+        return "PAPER beats ROCK!";
         
-    } else if (playerchoice=="scissors"& compchoice=="paper"){
-        return "Scissors beats Paper, you win!";  
-    } else if (playerchoice=="Scissors"& compchoice=="rock"){
-        return "Rock beats Scissors, you lose!";
+    } else if (playerchoice=="SCISSORS"& compchoice=="PAPER"){
+        playerscore++;
+        return "SCISSORS beats PAPER!";  
+    } else if (playerchoice=="SCISSORS"& compchoice=="ROCK"){
+        compscore++;
+        return "ROCK beats SCISSORS!";
     }
 }
 // run it five times
@@ -65,16 +88,15 @@ function game(){
 }
 }
 */
-let playerchoice;
-// Adding Event Listener
 
-// buttons is a node list. It looks and acts much like an array.
-const buttons = document.querySelectorAll('#btn');
-// we use the .forEach method to iterate through each button
-buttons.forEach((button) => {
-  // and for each one we add a 'click' listener
-  button.addEventListener('click', () => {
-    playerchoice = button.innerText;
-    playRound();
-  });
-});
+function counter(){
+    if (playerscore == 5){
+    alert('You Win!');
+    playerscore = 0;
+    compscore = 0;
+}   else if (compscore == 5) {
+    alert('You Lost!');
+    playerscore = 0;
+    compscore = 0;
+}
+};

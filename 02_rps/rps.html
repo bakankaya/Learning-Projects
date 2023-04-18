@@ -5,17 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Rock-Paper-Scissors</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Game can only run in the console right now!</h1>
-    <p>You can press f12 and then write game() to start.</p>
+    <h1>A Simple Rock-Paper-Scissors Game!</h1>
+    <p>First one to get to 5 wins!</p> 
+    <p> Good Luck!</p>
     <div class="selection">
-        <button id="btn">ROCK</button>
-        <button id="btn">PAPER</button>
-        <button id="btn">SCISSORS</button>
+        <div class="selections">
+            <img src="/sources/icons8-rock-100.png" alt="rock-symbol">
+            <button id="ROCK" class="btn">ROCK</button>
+        </div>
+        <div class="selections">
+            <img src="/sources/icons8-paper-100.png" alt="paper-symbol">
+            <button id="PAPER" class="btn">PAPER</button>
+        </div>
+        <div class="selections">
+            <img src="/sources/icons8-barber-scissors-100.png" alt="scissor-symbol">
+            <button id="SCISSORS" class="btn">SCISSORS</button>
+        </div>
+    </div>
+    <div class="results">
+        <p>Your Score=<span id="scorepy">0</span></p>
+        <p id="prompt">Result</p>
+        <p>Computer Score=<span id="scorepc">0</span></p>
     </div>
 
     <script src="rps.js"></script>
