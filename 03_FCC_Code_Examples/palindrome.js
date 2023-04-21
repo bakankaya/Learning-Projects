@@ -1,34 +1,21 @@
 // Palindrome Checker
 
 /* 
-TO DO: 
--Regex
--toLowercase
--reverse string
+Takes strings as variable, removes whitespace and symbols, 
+converts all chars to lowercase and makes an array,
+then compares this array with its revesed version.
 */
 
 function palindrome(str){
     let x = str.toLowerCase();
-    let regx = /[a-z]/g;
+    let regx = /[a-z0-9]/g;
     let arr = x.match(regx);
-    let arr2 = arr.reverse();
-    if (arr == arr2){
-        console.log('yah'); 
+    if (arr.toString() === arr.reverse().toString()){ 
         return true;
     } else {
-        console.log('nah');
         return false;
     };
 };
 
 
 
-palindrome("not a palindrome");
-
-
-let x = "yahu nedir bu";
-let arr = [...x];
-let arr2 = arr.reverse();
-
-console.log(arr);
-console.log(arr2);
