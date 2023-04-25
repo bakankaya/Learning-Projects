@@ -1,16 +1,22 @@
 // Caesars Cipher
+/*
+This is another freeCodeCamp challenge,
+Right now it only works for the rotation 13(the one they asked for)
+But the function can take a variable to rotate over alphabet
 
-let alphabet = [
-    'A', 'B', 'C', 'D', 'E', 'F',
-    'G', 'H', 'I', 'J', 'K', 'L',
-    'M', 'N', 'O', 'P', 'Q', 'R',
-    'S', 'T', 'U', 'V', 'W', 'X',
-    'Y', 'Z'
-  ];
-let g = -12
-console.log(alphabet.length -g);
+Another thing to improve is to encrypt the string, right now it only decodes
+
+*/
+
 
 function rot13(str) {
+    let alphabet = [
+        'A', 'B', 'C', 'D', 'E', 'F',
+        'G', 'H', 'I', 'J', 'K', 'L',
+        'M', 'N', 'O', 'P', 'Q', 'R',
+        'S', 'T', 'U', 'V', 'W', 'X',
+        'Y', 'Z'
+      ];
     let strArr = [...(str.toUpperCase())]; //till now, just made an array, contains all chars
     let result ="";
     for(let i=0; i<strArr.length; i++){  
@@ -23,21 +29,10 @@ function rot13(str) {
             let y = Math.abs(x-13);
             result += alphabet[alphabet.length -y];
         } else {
-        //    let x = alphabet.indexOf(strArr[i]);
-            result += alphabet[x -13]; //This needs to be done with loop to reach 13
+            result += alphabet[x -13]; 
         }
     };
     console.log(result);
 };
 
 rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.");
-
-// function yar(aha){
-//     let s ="";
-//     for(let i=0; i<aha;i++){
-//         s += "nah"
-//     }
-//     console.log(s);
-// }
-
-// yar(3);
