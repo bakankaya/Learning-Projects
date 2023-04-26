@@ -45,6 +45,8 @@ nav li {
 }
 nav li:hover{
     box-shadow: 5px 5px 2px white;
+    transform: scale(1.1);
+    transition: .8s;
 
 }
 nav li a{
@@ -88,6 +90,11 @@ article {
     background-color:#2f9fb3;
 }
 
+.sides >article:hover {
+    transform: scale(1.01);
+    transition: .8s;
+}
+
 #time{
     text-align:center;
     text-indent: 2em;
@@ -103,7 +110,9 @@ article button {
     width: 200px;
 }
 
-ar
+article img {
+    width: fit-content;
+}
 
 
 .sides img{
@@ -130,7 +139,8 @@ ar
 footer{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-between;
+    padding: 20px 0px;
 }
 
 footer div {
@@ -141,6 +151,5 @@ footer div {
 }
 
 .small_logo {
-    object-fit:contain;
     max-width: 50%;
 }
