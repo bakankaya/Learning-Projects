@@ -1,25 +1,69 @@
 
 body {
-    background-color:darkkhaki;
-    align-content: center;
+    font-family: 'Press Start 2P', cursive;
+    background-color:#b96b78;
     text-align: center;
+    color: #5e5e5e;
 }
+h1 {
+    text-shadow: 2px 2px wheat;
+}
+.gamesect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+
+}
+
 .selection, .results {
     display: flex;
-    margin: auto;
-    width: 50%;
-    gap: 50px;
-    padding: 50px;
+    border: 1px solid black;
+    justify-content: space-between;
+    gap: 5vw;
+    padding: 5vw;
+    margin: 0;
 }
 .selections {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid black;
+    max-width: 100%;
+    padding: 4px;
+    border:2px solid wheat;
+    border-radius: 4px;
+}
+img {
+    border:2px solid wheat;
+    border-radius: 4px;
+    max-width: 100%;
+}
+button {
+    background-color: #8070ac;
+    font-family: inherit;
+    color: wheat;
+    padding: 10px;
+    width: 140px;
+    margin-top: 8px;
+}
+.selections:hover > img{
+    transform: scale(1.08);
+    box-shadow:2px 2px 2px red, -2px 0 2px red;
+    
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: smaller;
 }
 
 
-button {
-    margin: 10px 30px;
-    padding: 10px;
-    width: 100px;
+@media (max-width:750px){
+    .gamesect{font-size: 10px;}
+    .selection{gap: 1vw;}
+    button{width: fit-content;}
+    img {max-width: 100px;}
 }
