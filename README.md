@@ -12,11 +12,10 @@ Just a static website for a made up company. Main goals were to learn;
 - A pretty basic layout.
 
 This one was from Coursera. 
+---
+![Screenshot of the page](01_Hair_Day/sources/Screenshot-Hair-Day.png "Page Screenshot")
 
-## 02_rps
+## 02_FCC_Code_Examples
 
-A simple rock-paper-scissors game. Main goals were;
-- To learn JS, conditionals mainly.
-- DOM Manupilation. Making a interactive website.
+Simple JS code snippets to learn.
 
-This one was from Odin Project.
