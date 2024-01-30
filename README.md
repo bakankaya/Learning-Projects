@@ -15,7 +15,7 @@ This one was from Coursera.
 
 ![Screenshot of the page](01_Hair_Day/sources/Screenshot-Hair-Day.png "Page Screenshot")
 
-## 02_FCC_Code_Examples
+## 03_FCC_Code_Examples
 
 Simple JS code snippets to learn.
 
