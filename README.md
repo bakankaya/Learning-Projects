@@ -12,7 +12,7 @@ Just a static website for a made up company. Main goals were to learn;
 - A pretty basic layout.
 
 This one was from Coursera. 
----
+
 ![Screenshot of the page](01_Hair_Day/sources/Screenshot-Hair-Day.png "Page Screenshot")
 
 ## 02_FCC_Code_Examples
